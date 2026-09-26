@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Portfolio</title>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="left">
+      <a href="/">Imane ZERROUKI</a>
+    </div>
+
+    <div class="right">
+      <a href="http://github.com" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-github"></i>
+        <span>Github</span>
+      </a>
+      
+      <a href="http://linkedin.com" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin"></i>
+        <span>Linkedin</span>
+      </a>
+      
+      <a href="mailto:john@example.com">
+        <i class="fa-solid fa-envelope"></i>
+        <span>Email</span>
+      </a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- SECTION 1: Hero -->
+    <section class="hero-section">
+      <div class="text">
+        <h2>Hi, I'm Imane 👋</h2>
+        <p>I'm a Network and Security Engineer based in Algeria, with nearly 4 years of experience keeping infrastructures running and protected. I currently work as a Network Administrator at OPGI, where I manage firewalls, VPNs, and directory services for a public organization's network</p>
+
+        <div class="links">
+          <a href="#skills">
+            <i class="fa-solid fa-code"></i>
+            <span>Skills</span>
+          </a>
+          
+          <a href="#testimony">
+            <i class="fa-solid fa-pen"></i>
+            <span>Testimony</span>
+          </a>
+          
+          <a href="#contact">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Contact</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="headshot">
+        <img src="images/hero-headshot.webp" alt="john doe headshot">
+      </div>
+    </section>
+
+    <!-- SECTION 2: Skills -->
+    <section id="skills" class="skills-section">
+      <h2>Skills</h2>
+      <div class="text">
+        Network and Security Engineer with experience in network administration, firewalls, VPNs, and system security. Skilled in Sophos XG, Cisco technologies, Jenkins, and modern IT infrastructure.
+      </div>
+
+      <div class="cells">
+        <div class="cell" onclick="openSkillModal('sophos')">
+          <img src="images/sophos-logo.webp" alt="Sophos XG logo">
+          <span>SOPHOS XG</span>
+        </div>
+        
+        <div class="cell" onclick="openSkillModal('cisco')">
+          <img src="images/cisco-logo.webp" alt="Cisco logo">
+          <span>Cisco</span>
+        </div>
+        
+        <div class="cell" onclick="openSkillModal('fortigate')">
+          <img src="images/fortigate-logo.webp" alt="FortiGate logo">
+          <span>FortiGate</span>
+        </div>
+        
+        <div class="cell" onclick="openSkillModal('jenkins')">
+          <img src="images/jenkins-logo.webp" alt="Jenkins logo">
+          <span>Jenkins</span>
+        </div>
+        
+        <div class="cell" onclick="openSkillModal('github')">
+          <img src="images/github-logo.webp" alt="Github logo">
+          <span>Github</span>
+        </div>
+
+        <div class="cell" onclick="openSkillModal('html')">
+          <img src="images/html-logo.webp" alt="HTML logo">
+          <span>HTML</span>
+        </div>
+        
+        <div class="cell" onclick="openSkillModal('css')">
+          <img src="images/css-logo.webp" alt="CSS logo">
+          <span>CSS</span>
+        </div>
+        
+        <div class="cell" onclick="openSkillModal('javascript')">
+          <img src="images/javascript-logo.webp" alt="JavaScript logo">
+          <span>JavaScript</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Testimony -->
+    <section id="testimony" class="testimony-section">
+      <h2>Testimony</h2>
+
+      <div class="group">
+        <div class="person-details">
+          <img src="images/testimony-headshot.webp">
+          <p>ZERROUKI Imane</p>
+          <p>Network & Security Engineer</p>
+        </div>
+
+        <div class="text">
+          "Network and Security Engineer based in Algeria, with nearly 4 years of experience keeping enterprise infrastructures running and protected. Managing firewalls, VPNs, and directory services for public enterprise networks."
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Contact -->
+    <section id="contact" class="contact-section">
+      <h2>Contact</h2>
+
+      <div class="group">
+        <div class="text">
+          Feel free to reach out for network defense consulting, firewall architecture, security hardening, or infrastructure project inquiries.
+        </div>
+
+        <form>
+          <label for="name">Name</label>
+          <input type="text" id="name">
+
+          <label for="email">Email</label>
+          <input type="email" id="email">
+
+          <label for="message">Message</label>
+          <textarea id="message" cols="30" rows="10"></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- SKILL MODAL POPUP -->
+  <div id="skill-modal" class="modal-overlay" onclick="closeSkillModal(event)">
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeSkillModal(true)">&times;</button>
+      <div class="modal-header">
+        <img id="modal-icon" src="" alt="Skill Icon">
+        <div>
+          <h3 id="modal-title">Skill Name</h3>
+          <p id="modal-subtitle">Skill Subtitle</p>
+        </div>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <!-- Details injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const skillData = {
+      sophos: {
+        title: "SOPHOS XG Firewall",
+        subtitle: "Next-Generation Network Security & Hardening",
+        icon: "images/sophos-logo.webp",
+        details: [
+          "<strong>NAT Rules:</strong> Creation and management of NAT rules (SNAT / DNAT).",
+          "<strong>Zone Filtering:</strong> Inbound & outbound filtering policies across LAN, WAN, and DMZ zones.",
+          "<strong>User Security Policies:</strong> User- and group-based access control policies.",
+          "<strong>Web & Application Control:</strong> Site categorization, web filtering, and application control.",
+          "<strong>IPS Defense:</strong> Intrusion Prevention System setup and attack signature updates.",
+          "<strong>VPN Architecture:</strong> Secure SSL and IPsec VPN tunnel configuration.",
+          "<strong>QoS & HA:</strong> Bandwidth shaping (QoS), High Availability (HA) clusters, and security log analysis."
+        ]
+      },
+      cisco: {
+        title: "Cisco Technologies",
+        subtitle: "Routing, Switching & Network Infrastructure",
+        icon: "images/cisco-logo.webp",
+        details: [
+          "<strong>Switching & Routing:</strong> Configuration of VLANs, Trunking, Inter-VLAN routing.",
+          "<strong>Routing Protocols:</strong> Static routing implementations.",
+          "<strong>Network Hardening:</strong> Port Security, Access Control Lists (ACLs).",
+          "<strong>Infrastructure Management:</strong> Enterprise network topology design, troubleshooting & maintenance."
+        ]
+      },
+      fortigate: {
+        title: "Fortinet FortiGate",
+        subtitle: "Enterprise Next-Gen Firewall & Threat Defense",
+        icon: "images/fortigate-logo.webp",
+        details: [
+          "<strong>Cybersecurity Fundamentals:</strong> Understanding of core security principles and their importance.",
+          "<strong>Common Cyberthreats:</strong> Identification of phishing, malware, and ransomware.",
+          "<strong>Security Best Practices:</strong> Application of protective measures for users and organizations",
+          "<strong>Fortinet Solutions:</strong> Knowledge of the basic concepts of Fortinet security products."
+        ]
+      },
+      jenkins: {
+        title: "Jenkins DevOps",
+        subtitle: "CI/CD Automation & Pipeline Management",
+        icon: "images/jenkins-logo.webp",
+        details: [
+          "<strong>Pipeline Automation:</strong> Building continuous integration & deployment pipelines (Jenkinsfile).",
+          "<strong>Automated Testing:</strong> Triggering automated code quality, security scans, and tests.",
+          "<strong>Git Integration:</strong> Webhook triggers, build notifications, and artifact deployments."
+        ]
+      },
+      github: {
+        title: "GitHub & Version Control",
+        subtitle: "Source Management, CI/CD & DevSecOps",
+        icon: "images/github-logo.webp",
+        details: [
+          "<strong>Version Control:</strong> Source code management, Gitflow branching, and code reviews.",
+          "<strong>GitHub Actions:</strong> CI/CD workflow automation for testing and deployment.",
+          "<strong>Security:</strong> Repository secret protection, security scanning, and permissions."
+        ]
+      },
+      html: {
+        title: "HTML5",
+        subtitle: "Semantic Web Structure & Accessibility",
+        icon: "images/html-logo.webp",
+        details: [
+          "Basic use of HTML5 tags (header, footer, nav, section).",
+          "Building simple forms with HTML.",
+          "Structuring web pages with semantic tags."
+        ]
+      },
+      css: {
+        title: "CSS3 & Styling",
+        subtitle: "Responsive Design & Modern UI Styling",
+        icon: "images/css-logo.webp",
+        details: [
+          " Page layout with CSS (Flexbox, Grid).",
+          "Basic styling (colors, fonts, margins, borders)"
+        ]
+      },
+      javascript: {
+        title: "JavaScript (ES6+)",
+        subtitle: "Dynamic Frontend Logic & Interactions",
+        icon: "images/javascript-logo.webp",
+        details: [
+          "Basic JavaScript concepts (variables, functions, conditions).",
+          "Event handling (clicks, forms)"
+        ]
+      }
+    };
+
+    function openSkillModal(skillKey) {
+      const data = skillData[skillKey];
+      if (!data) return;
+
+      document.getElementById('modal-icon').src = data.icon;
+      document.getElementById('modal-title').textContent = data.title;
+      document.getElementById('modal-subtitle').textContent = data.subtitle;
+
+      const body = document.getElementById('modal-body');
+      body.innerHTML = '<ul>' + data.details.map(item => `<li><i class="fa-solid fa-check"></i> ${item}</li>`).join('') + '</ul>';
+
+      const modal = document.getElementById('skill-modal');
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeSkillModal(force = false) {
+      const modal = document.getElementById('skill-modal');
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeSkillModal(true);
+    });
+  </script>
+</body>
+</html>
