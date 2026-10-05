@@ -23,17 +23,22 @@
     </div>
 
     <div class="right">
-      <a href="https://github.com/zerroukiimane" target="_blank" rel="noopener noreferrer">
+      <a href="#cv">
+        <i class="fa-solid fa-file-pdf"></i>
+        <span>CV</span>
+      </a>
+
+      <a href="http://github.com" target="_blank" rel="noopener noreferrer">
         <i class="fa-brands fa-github"></i>
         <span>Github</span>
       </a>
       
-      <a href="https://www.linkedin.com/in/imane-zerrouki-a7909b132/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B0q4cSUK5S36gIrVbt2rwtg%3D%3D" target="_blank" rel="noopener noreferrer">
+      <a href="http://linkedin.com" target="_blank" rel="noopener noreferrer">
         <i class="fa-brands fa-linkedin"></i>
         <span>Linkedin</span>
       </a>
       
-      <a href="mailto:imanezerrouki35@gmail.com">
+      <a href="mailto:imanezerrouki@gmail.com">
         <i class="fa-solid fa-envelope"></i>
         <span>Email</span>
       </a>
@@ -45,15 +50,25 @@
     <section class="hero-section">
       <div class="text">
         <h2>Hi, I'm Imane 👋</h2>
-        <p>I'm a Network and Security Engineer based in Algeria, with nearly 4 years of experience keeping infrastructures running and protected. I'm currently open to new opportunities, having recently managed firewalls, VPNs, and directory services as Network Administrator at OPGI."</p>
+        <p>I'm a Network and Security Engineer based in Algeria, with nearly 4 years of experience keeping infrastructures running and protected. I currently work as a Network Administrator at OPGI, where I manage firewalls, VPNs, and directory services for a public organization's network</p>
 
         <div class="links">
           <a href="#skills">
             <i class="fa-solid fa-code"></i>
             <span>Skills</span>
           </a>
+
+          <a href="#cv">
+            <i class="fa-solid fa-file-pdf"></i>
+            <span>Mon CV</span>
+          </a>
+
+          <a href="CV_Imane_ZERROUKI.pdf" download="CV_Imane_ZERROUKI.pdf" class="hero-cv-btn">
+            <i class="fa-solid fa-download"></i>
+            <span>Télécharger CV</span>
+          </a>
           
-          <a href="#Testimonial">
+          <a href="#testimony">
             <i class="fa-solid fa-pen"></i>
             <span>Testimonial</span>
           </a>
@@ -66,7 +81,7 @@
       </div>
 
       <div class="headshot">
-        <img src="hero-headshot.webp" alt="john doe headshot">
+        <img src="images/hero-headshot.webp" alt="john doe headshot">
       </div>
     </section>
 
@@ -79,43 +94,117 @@
 
       <div class="cells">
         <div class="cell" onclick="openSkillModal('sophos')">
-          <img src="sophos-logo.webp" alt="Sophos XG logo">
+          <img src="images/sophos-logo.webp" alt="Sophos XG logo">
           <span>SOPHOS XG</span>
         </div>
         
         <div class="cell" onclick="openSkillModal('cisco')">
-          <img src="cisco-logo.webp" alt="Cisco logo">
+          <img src="images/cisco-logo.webp" alt="Cisco logo">
           <span>Cisco</span>
         </div>
         
         <div class="cell" onclick="openSkillModal('fortigate')">
-          <img src="fortigate-logo.webp" alt="FortiGate logo">
+          <img src="images/fortigate-logo.webp" alt="FortiGate logo">
           <span>FortiGate</span>
         </div>
         
         <div class="cell" onclick="openSkillModal('jenkins')">
-          <img src="jenkins-logo.webp" alt="Jenkins logo">
+          <img src="images/jenkins-logo.webp" alt="Jenkins logo">
           <span>Jenkins</span>
         </div>
         
         <div class="cell" onclick="openSkillModal('github')">
-          <img src="github-logo.webp" alt="Github logo">
+          <img src="images/github-logo.webp" alt="Github logo">
           <span>Github</span>
         </div>
 
         <div class="cell" onclick="openSkillModal('html')">
-          <img src="html-logo.webp" alt="HTML logo">
+          <img src="images/html-logo.webp" alt="HTML logo">
           <span>HTML</span>
         </div>
         
         <div class="cell" onclick="openSkillModal('css')">
-          <img src="css-logo.webp" alt="CSS logo">
+          <img src="images/css-logo.webp" alt="CSS logo">
           <span>CSS</span>
         </div>
         
         <div class="cell" onclick="openSkillModal('javascript')">
-          <img src="javascript-logo.webp" alt="JavaScript logo">
+          <img src="images/javascript-logo.webp" alt="JavaScript logo">
           <span>JavaScript</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: CV -->
+    <section id="cv" class="cv-section">
+      <h2>Curriculum Vitae</h2>
+      <p class="cv-intro">
+        Ingénieure en Réseaux et Sécurité Informatique spécialisée dans la protection des infrastructures, l'administration de pare-feux (Sophos XG, FortiGate) et le routage/switching.
+      </p>
+
+      <div class="cv-action">
+        <a href="CV_Imane_ZERROUKI.pdf" download="CV_Imane_ZERROUKI.pdf" class="cv-download-btn">
+          <i class="fa-solid fa-file-arrow-down"></i>
+          <span>Télécharger mon CV (PDF)</span>
+        </a>
+      </div>
+
+      <div class="cv-grid">
+        <!-- Card 1: Expérience -->
+        <div class="cv-card">
+          <div class="cv-card-header">
+            <i class="fa-solid fa-briefcase"></i>
+            <h3>Expérience Professionnelle</h3>
+          </div>
+          <div class="cv-timeline">
+            <div class="cv-item">
+              <div class="cv-item-badge">2021 - Présent</div>
+              <h4>Administratrice Réseau & Sécurité</h4>
+              <p class="cv-company"><i class="fa-solid fa-building"></i> OPGI - Office de Promotion et de Gestion Immobilière</p>
+              <ul>
+                <li><i class="fa-solid fa-angle-right"></i> Administration et sécurisation de l'infrastructure réseau d'une entreprise publique.</li>
+                <li><i class="fa-solid fa-angle-right"></i> Configuration des pare-feux Sophos XG & FortiGate (NAT, zones LAN/WAN/DMZ, filtrage web).</li>
+                <li><i class="fa-solid fa-angle-right"></i> Déploiement et gestion des tunnels VPN (SSL & IPsec) pour l'interconnexion sécurisée des sites.</li>
+                <li><i class="fa-solid fa-angle-right"></i> Administration des services réseau (Active Directory, DNS, DHCP, GPO).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Formation -->
+        <div class="cv-card">
+          <div class="cv-card-header">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <h3>Formation & Diplômes</h3>
+          </div>
+          <div class="cv-timeline">
+            <div class="cv-item">
+              <div class="cv-item-badge">Diplôme d'Ingénieur / Master</div>
+              <h4>Réseaux & Sécurité Informatique</h4>
+              <p class="cv-company"><i class="fa-solid fa-university"></i> Université & Formation Spécialisée</p>
+              <p class="cv-desc">
+                Formation approfondie axée sur la télécommunication, la sécurité des données, l'architecture des réseaux d'entreprise, la cryptographie et la gestion de crise de cybersécurité.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Compétences Clés & Certifications -->
+        <div class="cv-card">
+          <div class="cv-card-header">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>Certifications & Domain Skills</h3>
+          </div>
+          <div class="cv-skills-tags">
+            <span class="tag"><i class="fa-solid fa-shield-cat"></i> Sophos XG Firewall</span>
+            <span class="tag"><i class="fa-solid fa-network-wired"></i> Cisco Switching & Routing</span>
+            <span class="tag"><i class="fa-solid fa-lock"></i> Fortinet FortiGate</span>
+            <span class="tag"><i class="fa-solid fa-key"></i> VPN SSL & IPsec</span>
+            <span class="tag"><i class="fa-solid fa-server"></i> Active Directory & DNS/DHCP</span>
+            <span class="tag"><i class="fa-solid fa-gears"></i> DevOps & Jenkins</span>
+            <span class="tag"><i class="fa-brands fa-github"></i> Git & GitHub</span>
+            <span class="tag"><i class="fa-code"></i> HTML5 / CSS3 / JavaScript</span>
+          </div>
         </div>
       </div>
     </section>
@@ -126,7 +215,7 @@
 
       <div class="group">
         <div class="person-details">
-          <img src="testimony-headshot.webp">
+          <img src="images/testimony-headshot.webp">
           <p>ZERROUKI Imane</p>
           <p>Network & Security Engineer</p>
         </div>
