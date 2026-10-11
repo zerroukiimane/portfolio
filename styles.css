@@ -106,8 +106,9 @@ nav .right a span {
 .hero-section .headshot img {
   width: 350px;
   height: 350px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  object-position: 85% 15%;
+  object-position: center 20%;
   border-radius: 50%;
 }
 
@@ -266,8 +267,13 @@ nav .right a span {
     flex-direction: column-reverse;
   }
 
+  .hero-section .headshot {
+    justify-content: center;
+  }
+
   .hero-section .headshot img {
-    width: 300px;
+    width: 280px;
+    height: 280px;
   }
 
   /* SECTION 3: Testimony */
