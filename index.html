@@ -53,10 +53,14 @@
         <span>Linkedin</span>
       </a>
       
-      <a href="mailto:imanezerrouki@gmail.com">
+      <a href="mailto:imanezerrouki@gmail.com" class="nav-email-btn">
         <i class="fa-solid fa-envelope"></i>
         <span>Email</span>
       </a>
+
+      <button id="theme-toggle" class="theme-toggle-btn" aria-label="Changer de thème" title="Changer de thème">
+        <i class="fa-solid fa-moon"></i>
+      </button>
     </div>
   </nav>
 
@@ -399,6 +403,42 @@
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') closeSkillModal(true);
     });
+
+    // Theme Switcher (Dark / Light)
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
+
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      try {
+        localStorage.setItem('portfolio-theme', theme);
+      } catch (err) {}
+
+      if (themeIcon) {
+        if (theme === 'dark') {
+          themeIcon.className = 'fa-solid fa-sun';
+          themeToggleBtn.setAttribute('title', 'Passer en mode clair');
+        } else {
+          themeIcon.className = 'fa-solid fa-moon';
+          themeToggleBtn.setAttribute('title', 'Passer en mode sombre');
+        }
+      }
+    }
+
+    // Initialize theme from localStorage or default
+    try {
+      const savedTheme = localStorage.getItem('portfolio-theme');
+      if (savedTheme) {
+        applyTheme(savedTheme);
+      }
+    } catch (err) {}
+
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', function() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        applyTheme(isDark ? 'light' : 'dark');
+      });
+    }
   </script>
 </body>
 </html>
